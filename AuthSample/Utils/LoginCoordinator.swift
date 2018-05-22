@@ -5,7 +5,7 @@ import Alamofire
 
 class LoginCoordinator: ILLoginKit.LoginCoordinator {
     
-    // api calls
+    // for api calls
     let signUp_apiurl = Session.Local+"/booklog/register.php"
     let login_apiurl = Session.Local+"/booklog/login.php"
     
@@ -21,6 +21,7 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
     override func finish(animated: Bool = true) {
         super.finish(animated: animated)
     }
+    
 
     func configureAppearance() {
 		configuration = DefaultConfiguration(backgroundImage: #imageLiteral(resourceName: "Background"),
@@ -40,6 +41,10 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
 											 shouldShowFacebookButton: true,
 											 shouldShowForgotPassword: true)
     }
+    
+    
+    
+    
 
     override func login(email: String, password: String) {
         

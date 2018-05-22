@@ -14,7 +14,6 @@
 		5427BA0A207EA46900341F66 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427BA00207EA46800341F66 /* LoginCoordinator.swift */; };
 		5427BA0B207EA46900341F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427BA02207EA46900341F66 /* ViewController.swift */; };
 		5427BA0D207EA46900341F66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5427BA05207EA46900341F66 /* Images.xcassets */; };
-		6D3F18DB1E02EDE4A93295D5 /* Pods_BookLog_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C66546AAC89101A534A80A /* Pods_BookLog_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BF0DE122208566390037B92F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0DE120208566390037B92F /* Main.storyboard */; };
 		BF96A97A2082C9C60017A578 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96A9792082C9C50017A578 /* Session.swift */; };
 		EE822FA20FB61A32CF7F26B4 /* Pods_AuthSample_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AD725021ED4DE029BC72E1 /* Pods_AuthSample_Example.framework */; };
@@ -24,7 +23,6 @@
 		05EC0EA20D5AEA531F89A653 /* Pods-BookLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginKit_Tests/Pods-LoginKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		13BC745B9954E69A0B8E8521 /* Pods-AuthSample_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthSample_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthSample_Example/Pods-AuthSample_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1708C22D56F179894DAC4396 /* Pods-BookLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginKit_Tests/Pods-LoginKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		37A0E8AC979E41D702302CEB /* Pods_BookLog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookLog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E0725879F0D992AFA386B7 /* Pods-BookLog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginKit_Example/Pods-LoginKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		540B5CC8207EF3090011F78F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5427B9F7207EA46800341F66 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +34,6 @@
 		5D777AB480B84963E28686AA /* Pods-BookLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginKit_Example/Pods-LoginKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5ED45CC8D90477331D17341A /* Pods-BookLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookLog_Example/Pods-BookLog_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AuthSample_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthSample_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C66546AAC89101A534A80A /* Pods_BookLog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookLog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70A3274DFB5B41C84D6DB9 /* Pods-BookLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookLog_Tests/Pods-BookLog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0DE121208566390037B92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF96A9792082C9C50017A578 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -51,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D3F18DB1E02EDE4A93295D5 /* Pods_BookLog_Example.framework in Frameworks */,
 				EE822FA20FB61A32CF7F26B4 /* Pods_AuthSample_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,8 +75,6 @@
 		412E2DC98D7B4F381F58A5C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83C66546AAC89101A534A80A /* Pods_BookLog_Example.framework */,
-				37A0E8AC979E41D702302CEB /* Pods_BookLog_Tests.framework */,
 				C2AD725021ED4DE029BC72E1 /* Pods_AuthSample_Example.framework */,
 			);
 			name = Frameworks;
@@ -165,7 +159,6 @@
 				5427B9FF207EA46800341F66 /* Utils */,
 				5427B9FA207EA46800341F66 /* Views */,
 			);
-			name = AuthSample;
 			path = AuthSample;
 			sourceTree = "<group>";
 		};
