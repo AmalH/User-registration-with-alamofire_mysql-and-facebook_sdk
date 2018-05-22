@@ -1,4 +1,4 @@
-# User management system in Swift.iOS
+# User management in Swift.iOS
 
 This repo is associated to an [iOS tutorials/samples series](http://pragmatictheories.tech/category/ios/) I am currently sharing.
 It helps you implement user management in Swift with Alamofire and MySQL and includes a Facebook registration module.
@@ -11,9 +11,10 @@ This repo and [the associated tutorial](http://pragmatictheories.tech/category/i
 (....)
 
 * ### Facebook SDK for Swift integration
-Easy and clear implementation of Facebook SDK for Swift (...)
+Easy and clear implementation of Facebook SDK for Swift 
 
-![linkedInLogin](https://raw.githubusercontent.com/AmalH/KotlinLearning-Part1-/master/screenshots/linkedInRegistration.png)
+(...)
+
 
 * ### Facebook SDK for Android integration
 Use of the Facebook sdK for Android to log user in through their facebook account.
