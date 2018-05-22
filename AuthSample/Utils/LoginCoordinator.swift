@@ -5,7 +5,7 @@ import Alamofire
 
 class LoginCoordinator: ILLoginKit.LoginCoordinator {
     
-    // for api calls
+    // api calls
     let signUp_apiurl = Session.Local+"/booklog/register.php"
     let login_apiurl = Session.Local+"/booklog/login.php"
     
@@ -21,7 +21,6 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
     override func finish(animated: Bool = true) {
         super.finish(animated: animated)
     }
-    
 
     func configureAppearance() {
 		configuration = DefaultConfiguration(backgroundImage: #imageLiteral(resourceName: "Background"),
@@ -42,9 +41,6 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
 											 shouldShowForgotPassword: true)
     }
     
-    
-    
-    
 
     override func login(email: String, password: String) {
         
@@ -55,37 +51,67 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
             "password":password,
             ]
         
-        Alamofire.request(login_apiurl, method: .get, parameters: parameters).responseJSON
+       /* Alamofire.request(login_apiurl, method: .get, parameters: parameters).response
             {
                 response  in
-                //getting the json value from the server
-                if let result = response.result.value  {
-                    //converting it as NSDictionary
+                print("JSON:\(response)")
+                // getting the json value from the serverllo
+                if let result = response
+                {
                     let jsonData = result as! NSDictionary
-                    print("pass")
                     print(jsonData)
                     
-                    let val = jsonData.value(forKey: "value")!
+                    let val = jsonData.value(forKey: "value") as! Int64
                     print(val)
                     
-                    for (key, value) in jsonData {
-                        print(key)
-                        print(value)
+                    if(val==0){
+                        print("fail")
+                        //self.finish()
                     }
-                   // let val = jsonData.value(forKey: "value") as! [[String:Any]]
-                    //let res = val[0]["value"]!
-                    //print(val)
+                    else if(val==1){
+                        print("succes")
+                        let alertController = UIAlertController(title: "Welcome to BooklOg", message: "you were successfully registered", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "Go to login", style: .default, handler: nil)
+                        alertController.addAction(defaultAction)
+                        //self.didSelectLogin(self.viewController, email: email, password:password)
+                    }
+                    
                 }
-                
-                
-        }
+                self.finish()
+                }*/
         //self.viewController.performSegue(withIdentifier: "navigateToHome", sender: nil)
-		finish()
+		//finish()
     }
 
     override func signup(name: String, email: String, password: String){
         
-        let parameters: Parameters=[
+        print("from signup")
+        
+        guard let url = URL(string: signUp_apiurl) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            if let data = data {
+                do {
+                    print("RES RES \(data)")
+                  /*  let json = try JSON(data: data)
+                    print("RES RES \(json)")
+                    let list: Array<JSON> = json["books"].arrayValue
+                    let name = ((list[0])["isbn13"]).stringValue
+                    // Getting a string from a JSON Dictionary
+                    print("TEST TEST \(name)")*/
+                    
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+            }.resume()
+       /* let parameters: Parameters=[
             "email":email,
            "password":password,
            "username":name
@@ -94,7 +120,8 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         Alamofire.request(signUp_apiurl, method: .get, parameters: parameters).responseJSON
             {
                 response  in
-               // getting the json value from the serverllo
+                print("JSON:\(response.result.value)")
+                // getting the json value from the serverllo
                 if let result = response.result.value
                 {
                     let jsonData = result as! NSDictionary
@@ -110,27 +137,15 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
                     }
                     else if(val==1){
                         print("succes")
-                        
                         let alertController = UIAlertController(title: "Welcome to BooklOg", message: "you were successfully registered", preferredStyle: .alert)
                         let defaultAction = UIAlertAction(title: "Go to login", style: .default, handler: nil)
                         alertController.addAction(defaultAction)
-                        //present(alertController, animated: true, completion: nil)
-                        
                         self.didSelectLogin(self.viewController, email: email, password:password)
-                        //self.didSelectSignup(self.viewController, email:email, name:name, password:password)
-                        /*let email = val[0]["email"]!
-                         let id = val[0]["id"]!
-                         let username = val[0]["username"]!
-                         print(id)
-                         let defaults = UserDefaults.standard
-                         defaults.set(id, forKey: "id")
-                         defaults.set(email, forKey: "email")
-                         defaults.set(username, forKey: "username")*/
                     }
                    
                 }
                 self.finish()
-        }
+        }*/
         
         
     }
