@@ -16,10 +16,6 @@ Easy and clear implementation of Facebook SDK for Swift
 (...)
 
 
-* ### Facebook SDK for Android integration
-Use of the Facebook sdK for Android to log user in through their facebook account.
-User registration or signin through Firebase after getting user permission to get their data.
-
 * ### Facebook Graph API integration/manipulation
 Use of the Graph API to get user's profile picture and basic data for the moment.
 In following parts we'll be consuming user's shares, news feed and more.
