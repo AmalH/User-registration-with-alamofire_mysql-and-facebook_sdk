@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.33.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.31.0):
+    - FBSDKCoreKit
+  - ILLoginKit (1.0.1):
+    - FBSDKLoginKit (= 4.31.0)
+    - Validator (= 3.0.2)
+  - ImageSlideshow (1.5.3):
+    - ImageSlideshow/Core (= 1.5.3)
+  - ImageSlideshow/Core (1.5.3)
+  - Validator (3.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - ILLoginKit
+  - ImageSlideshow (~> 1.5)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - ILLoginKit
+    - ImageSlideshow
+    - Validator
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 95a252ddffd6919c0f132a02292f0824616d8709
+  ILLoginKit: 6f717fa907114986b6914d1502bf8bd40b3720e5
+  ImageSlideshow: 24a1184909f589379ba2527ebcc77996881bb1f2
+  Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
+
+PODFILE CHECKSUM: 8a284c0dd414399feb9c6ad32fdff5228d9b5b9f
+
+COCOAPODS: 1.5.0

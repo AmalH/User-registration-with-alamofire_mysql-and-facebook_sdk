@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0nT-ZR-IME">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="HYe-aI-Xw6">
+            <objects>
+                <viewController title="HomeViewController" id="FMY-26-N1i" customClass="HomeViewController" customModule="AuthSample_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O6B-G0-Tpm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZNE-mU-zTl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ySj-In-3vf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hellooooooo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-JV-g9A">
+                                <rect key="frame" x="139" y="274" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HF5-0d-chH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAc-A3-82X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="86.619718309859152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bib-bk-OhG">
+            <objects>
+                <tabBarController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="0nT-ZR-IME" customClass="ViewController" customModule="AuthSample_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Uw-NG-Mgw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0ku-2I-Ouv" kind="relationship" relationship="viewControllers" id="mCc-is-BYB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnU-Bq-xda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1415.625" y="86.619718309859152"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Q5W-2S-lxx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ku-2I-Ouv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="IconHome 30x30" id="GGh-Dc-zn0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5aY-Bq-njn">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FMY-26-N1i" kind="relationship" relationship="rootViewController" id="aBO-IP-ZG5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9PB-5t-e5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2648" y="87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IconHome 30x30" width="30" height="30"/>
+    </resources>
+</document>
