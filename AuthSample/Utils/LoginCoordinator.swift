@@ -120,15 +120,12 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         Alamofire.request("http://localhost:8888/authSample/register.php", method: .get, parameters: parameters).responseJSON
             {
                 response  in
- print("RESPONSE 1:\(response)")
                 if let result = response.result.value
                 {
                     
-                    print("RESPONSE 2:\(response)")
                     let jsonData = result as! NSDictionary
                     let val = jsonData.value(forKey: "value") as! Int64
                     print("VALUE:\(val)")
-                     print("RESPONSE 3:\(jsonData)")
                     
                     if(val==0){
                         print("fail")
