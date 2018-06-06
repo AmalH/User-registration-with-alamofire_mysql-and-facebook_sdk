@@ -47,10 +47,21 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
             "email":email,
             "password":password]
         
+        //
         Alamofire.request("http://localhost:8888/authSample/login.php", method: .get, parameters: parameters).responseJSON
             {
+                
                 response  in
-                 print("RES:\(response.result.value)")
+                
+                if let error = response.result.error as? AFError {
+                    if case .responseValidationFailed(.unacceptableStatusCode(let code)) = error {
+                        print("ERROR:\(code)")
+                    }
+                }
+                
+                let status = response.response?.statusCode
+                print("STATUS \(status)")
+                
                 if let result = response.result.value
                 {
                     let jsonData = result as! NSDictionary
@@ -59,16 +70,43 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
                     
                     if(val==0){
                         print("fail")
-                        self.didSelectLogin(self.viewController, email:email,password:password)
-                         self.finish()
+                        //self.didSelectSignup(self.viewController, email:email, name:"", password:password)
                     }
                     else if(val==1){
                         print("succes")
-                       //self.signupDidSelectBack(self.viewController)
-                        self.visibleViewController()!.performSegue(withIdentifier: "navigateToHome", sender: self.visibleViewController()!)
+                        /*let alert = UIAlertController(title: "Registered !", message: "You havee been successfully registered!", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Take me to login", style: UIAlertActionStyle.cancel) {
+                            UIAlertAction in
+                            super.didSelectLogin(self.visibleViewController()!, email: "", password: "")
+                            // self.signupDidSelectBack(self.viewController)
+                        })
+                        self.visibleViewController()!.present(alert, animated: true, completion: nil)*/
                     }
                 }
         }
+        
+      /*  guard let url = URL(string: "http://localhost:8888/authSample/login.php") else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            if let data = data {
+                do {
+                    print("RES RES \(data)")
+                    let jsonDict:NSDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+                    print("JSON RES \(jsonDict)")
+                
+                    
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+            }.resume()*/
         
     }
 
@@ -82,12 +120,15 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         Alamofire.request("http://localhost:8888/authSample/register.php", method: .get, parameters: parameters).responseJSON
             {
                 response  in
-
+ print("RESPONSE 1:\(response)")
                 if let result = response.result.value
                 {
+                    
+                    print("RESPONSE 2:\(response)")
                     let jsonData = result as! NSDictionary
                     let val = jsonData.value(forKey: "value") as! Int64
                     print("VALUE:\(val)")
+                     print("RESPONSE 3:\(jsonData)")
                     
                     if(val==0){
                         print("fail")
@@ -99,8 +140,8 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
                        
                         alert.addAction(UIAlertAction(title: "Take me to login", style: UIAlertActionStyle.cancel) {
                             UIAlertAction in
-                    //super.didSelectLogin(self.visibleViewController()!, email: "", password: "")
-                            self.signupDidSelectBack(self.viewController)
+                           // super.didSelectLogin(self.visibleViewController()!, email: "", password: "")
+                           self.signupDidSelectBack(self.viewController)
                         })
                         self.visibleViewController()!.present(alert, animated: true, completion: nil)
                     }
