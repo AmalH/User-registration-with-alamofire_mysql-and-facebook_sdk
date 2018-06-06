@@ -5,9 +5,6 @@ import Alamofire
 
 class LoginCoordinator: ILLoginKit.LoginCoordinator {
     
-    // api calls
-    let signUp_apiurl = Session.Local+"/booklog/register.php"
-    let login_apiurl = Session.Local+"/booklog/login.php"
     
     // reference to ViewController [ used for performsegui calls ]
     let viewController:ViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"ViewController") as! ViewController
@@ -48,110 +45,75 @@ class LoginCoordinator: ILLoginKit.LoginCoordinator {
         
         let parameters: Parameters=[
             "email":email,
-            "password":password,
-            ]
+            "password":password]
         
-       /* Alamofire.request(login_apiurl, method: .get, parameters: parameters).response
+        Alamofire.request("http://localhost:8888/authSample/login.php", method: .get, parameters: parameters).responseJSON
             {
                 response  in
-                print("JSON:\(response)")
-                // getting the json value from the serverllo
-                if let result = response
-                {
-                    let jsonData = result as! NSDictionary
-                    print(jsonData)
-                    
-                    let val = jsonData.value(forKey: "value") as! Int64
-                    print(val)
-                    
-                    if(val==0){
-                        print("fail")
-                        //self.finish()
-                    }
-                    else if(val==1){
-                        print("succes")
-                        let alertController = UIAlertController(title: "Welcome to BooklOg", message: "you were successfully registered", preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "Go to login", style: .default, handler: nil)
-                        alertController.addAction(defaultAction)
-                        //self.didSelectLogin(self.viewController, email: email, password:password)
-                    }
-                    
-                }
-                self.finish()
-                }*/
-        //self.viewController.performSegue(withIdentifier: "navigateToHome", sender: nil)
-		//finish()
-    }
-
-    override func signup(name: String, email: String, password: String){
-        
-        print("from signup")
-        
-        guard let url = URL(string: signUp_apiurl) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            
-            if let data = data {
-                do {
-                    print("RES RES \(data)")
-                  /*  let json = try JSON(data: data)
-                    print("RES RES \(json)")
-                    let list: Array<JSON> = json["books"].arrayValue
-                    let name = ((list[0])["isbn13"]).stringValue
-                    // Getting a string from a JSON Dictionary
-                    print("TEST TEST \(name)")*/
-                    
-                } catch let error as NSError {
-                    print(error.localizedDescription)
-                }
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-            }.resume()
-       /* let parameters: Parameters=[
-            "email":email,
-           "password":password,
-           "username":name
-           ]
-        
-        Alamofire.request(signUp_apiurl, method: .get, parameters: parameters).responseJSON
-            {
-                response  in
-                print("JSON:\(response.result.value)")
-                // getting the json value from the serverllo
+                 print("RES:\(response.result.value)")
                 if let result = response.result.value
                 {
                     let jsonData = result as! NSDictionary
-                    print(jsonData)
-                    
                     let val = jsonData.value(forKey: "value") as! Int64
-                    print(val)
+                    print("VALUE:\(val)")
+                    
+                    if(val==0){
+                        print("fail")
+                        self.didSelectLogin(self.viewController, email:email,password:password)
+                         self.finish()
+                    }
+                    else if(val==1){
+                        print("succes")
+                       //self.signupDidSelectBack(self.viewController)
+                        self.visibleViewController()!.performSegue(withIdentifier: "navigateToHome", sender: self.visibleViewController()!)
+                    }
+                }
+        }
+        
+    }
+
+    override func signup(name: String, email: String, password: String){
+
+        let parameters: Parameters=[
+           "email":email,
+           "password":password,
+           "username":name]
+        
+        Alamofire.request("http://localhost:8888/authSample/register.php", method: .get, parameters: parameters).responseJSON
+            {
+                response  in
+
+                if let result = response.result.value
+                {
+                    let jsonData = result as! NSDictionary
+                    let val = jsonData.value(forKey: "value") as! Int64
+                    print("VALUE:\(val)")
                     
                     if(val==0){
                         print("fail")
                         self.didSelectSignup(self.viewController, email:email, name:name, password:password)
-                        //self.finish()
                     }
                     else if(val==1){
                         print("succes")
-                        let alertController = UIAlertController(title: "Welcome to BooklOg", message: "you were successfully registered", preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "Go to login", style: .default, handler: nil)
-                        alertController.addAction(defaultAction)
-                        self.didSelectLogin(self.viewController, email: email, password:password)
+                        let alert = UIAlertController(title: "Registered !", message: "You havee been successfully registered!", preferredStyle: UIAlertControllerStyle.alert)
+                       
+                        alert.addAction(UIAlertAction(title: "Take me to login", style: UIAlertActionStyle.cancel) {
+                            UIAlertAction in
+                    //super.didSelectLogin(self.visibleViewController()!, email: "", password: "")
+                            self.signupDidSelectBack(self.viewController)
+                        })
+                        self.visibleViewController()!.present(alert, animated: true, completion: nil)
                     }
                    
                 }
-                self.finish()
-        }*/
+               
+        }
         
         
     }
 
     override func enterWithFacebook(profile: FacebookProfile) {
-        // Handle Facebook login/signup via your API
+        // WILL BE FINISHED NEXT TUTORIAL
         print("Login/Signup via Facebook")
 
     }

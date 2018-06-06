@@ -15,7 +15,6 @@
 		5427BA0B207EA46900341F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5427BA02207EA46900341F66 /* ViewController.swift */; };
 		5427BA0D207EA46900341F66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5427BA05207EA46900341F66 /* Images.xcassets */; };
 		BF0DE122208566390037B92F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0DE120208566390037B92F /* Main.storyboard */; };
-		BF96A97A2082C9C60017A578 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96A9792082C9C50017A578 /* Session.swift */; };
 		EE822FA20FB61A32CF7F26B4 /* Pods_AuthSample_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2AD725021ED4DE029BC72E1 /* Pods_AuthSample_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		607FACD01AFB9204008FA782 /* AuthSample_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthSample_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70A3274DFB5B41C84D6DB9 /* Pods-BookLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookLog_Tests/Pods-BookLog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0DE121208566390037B92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF96A9792082C9C50017A578 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C2AD725021ED4DE029BC72E1 /* Pods_AuthSample_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthSample_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C790D62162E9D9E3BF5203AA /* Pods-BookLog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookLog_Example/Pods-BookLog_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D11E7C58AC19280BD423E4EC /* Pods-BookLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookLog_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookLog_Tests/Pods-BookLog_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		5427B9FF207EA46800341F66 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BF96A9792082C9C50017A578 /* Session.swift */,
 				5427BA00207EA46800341F66 /* LoginCoordinator.swift */,
 			);
 			path = Utils;
@@ -264,7 +261,6 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ILLoginKit/ILLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -274,7 +270,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +286,6 @@
 			files = (
 				540B5CC9207EF3090011F78F /* HomeViewController.swift in Sources */,
 				5427BA0B207EA46900341F66 /* ViewController.swift in Sources */,
-				BF96A97A2082C9C60017A578 /* Session.swift in Sources */,
 				5427BA0A207EA46900341F66 /* LoginCoordinator.swift in Sources */,
 				5427BA06207EA46900341F66 /* AppDelegate.swift in Sources */,
 			);

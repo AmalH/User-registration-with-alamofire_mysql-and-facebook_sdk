@@ -62,12 +62,12 @@
                     <tabBarItem key="tabBarItem" title="Home" image="IconHome 30x30" id="GGh-Dc-zn0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5aY-Bq-njn">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="FMY-26-N1i" kind="relationship" relationship="rootViewController" id="aBO-IP-ZG5"/>
+                        <segue destination="FMY-26-N1i" kind="show" identifier="navigateToHome" id="1F9-gU-hiz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9PB-5t-e5J" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,7 +1,7 @@
 import UIKit
 import ILLoginKit
 
-class ViewController: UITabBarController {
+class ViewController: UIViewController {
 
 	var hasShownLogin = false
     
@@ -24,7 +24,6 @@ class ViewController: UITabBarController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
