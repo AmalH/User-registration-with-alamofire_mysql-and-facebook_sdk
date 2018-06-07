@@ -31,7 +31,7 @@ override func signup(name: String, email: String, password: String){
            "password":password,
            "username":name]
         
-        Alamofire.request("http://localhost:8888/authSample/register.php", method: .get, parameters: parameters).responseJSON
+        Alamofire.request("http://102.157.226.95:8888/authSample/register.php", method: .get, parameters: parameters).responseJSON
             {
                 response  in
                 if let result = response.result.value
