@@ -13,11 +13,11 @@ LoginKit takes care of the UI, the forms, the data validation, and Facebook SDK 
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/iloginkit1.png"/>
+<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/screenshots/iloginkit1.png"/>
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/iloginkit3.png"/>
+<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/screenshots/iloginkit3.png"/>
 </p>
 
 * ### Use of Alamofire to consume PHP/MYSQL backend for user registration
@@ -61,7 +61,7 @@ override func signup(name: String, email: String, password: String){
 ```
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/mysql1.png"/>
+<img src="https://raw.githubusercontent.com/AmalH/User-registration-with-alamofire_mysql-and-facebook_sdk/master/screenshots/mysql1.png"/>
 </p>
 
 * ### Facebook SDK for Swift integration
